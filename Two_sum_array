@@ -1,0 +1,42 @@
+import java.util.*;
+public class Solution
+{
+    public static int[] twoSum(int[] nums, int target)
+{
+        for(int i = 0; i < nums.length-1; i++)
+    {
+        
+        for(int j = i+1; j < nums.length; j++)
+        {
+            if(nums[i] + nums[j] == target)
+            {
+                return new int[]{i , j };
+                
+            }//if block
+            else
+                continue;
+        }//for j
+    }//for i
+            return new int[]{0, 0};
+}
+
+    public static void main(String args[])
+    {
+        int n;//n is no. of elements
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int nums[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            nums[i]=sc.nextInt();
+        }
+        int k;
+        k=sc.nextInt();
+    
+        for(int x : twoSum(nums , k))
+        {
+            System.out.print(x + " ");
+        }//for
+    }
+ 
+}//class
