@@ -1,0 +1,28 @@
+import java .util.*;
+public class Solution
+{
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n)
+    {
+        /*public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) */
+        int sum = 0;
+        while (n != 0)
+        { // flip the rightmost `1` until  all bits are `0`
+            sum++;
+            n &= (n - 1); // n = n & (n-1)
+        
+    }
+        return sum;
+}
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n;
+        n=sc.nextInt();
+        Solution sol=new Solution();
+       int s= sol.hammingWeight(n);
+        System.out.println(s);
+    }
+    }
